@@ -3,9 +3,11 @@ package run;
 public class Trailer extends Transport
 {
 	// вызываем конструктор родительского класса
-	protected Trailer(String mark, String model, double maxmas, int kol, double maxspeed)
+	protected Trailer(String mark, String model, double maxmas, int kol, double maxspeed, double mastrailer, double heightload)
 	{
 		super(mark, model, maxmas, kol, maxspeed);
+		this.mastrailer = mastrailer;
+		this.heightload =heightload;
 	}
 	protected double mastrailer;
 	protected double heightload;//высота груза
@@ -19,7 +21,7 @@ public class Trailer extends Transport
 public String toString() 
 	{
 		//вызываем реализацию родительского класса
-	return "Класс трейлер имеет следующие свойства \t"+super.toString() + "\t" ;
+	return "Класс трейлер имеет следующие свойства \n" + super.toString() + "\t" + mastrailer + "\t" + heightload + "\n" ;
 	}
 }
 

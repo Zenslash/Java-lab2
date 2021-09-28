@@ -20,7 +20,7 @@ public class Motorcycle extends Transport
 public String toString() 
 	{
 		//вызываем реализацию родительского класса
-	return "Класс автомобиль имеет следующие свойства "+super.toString() + "\t" ;
+	return "Класс мотоцикл имеет следующие свойства \n"+super.toString() + "\t" + carriage + "\t" + type + "\n" ;
 	}
 }
 

@@ -21,6 +21,6 @@ public class Bus extends Transport
 public String toString() 
 	{
 		//вызываем реализацию родительского класса
-	return "Класс автобус имеет следующие свойства:\t "+super.toString() + "\t" ;
+	return "Класс автобус имеет следующие свойства:\n "+super.toString() + "\t" + kolfloor + "\t" + height + "\n";
 	}
 }

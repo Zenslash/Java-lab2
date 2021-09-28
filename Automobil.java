@@ -3,11 +3,11 @@ package run;
 public class Automobil extends TransportTrailer
 {
 	// вызываем конструктор родительского класса
-	protected Automobil(String mark, String model, double maxmas, int kol, double maxspeed)
+	protected Automobil(String mark, String model, double maxmas, int kol, double maxspeed, Trailer trailer)
 	{
-		super(mark, model, maxmas, kol, maxspeed);// надо запихнуть trailer
+		super(mark, model, maxmas, kol, maxspeed, trailer);
 	}
-	//protected boolean trailer;?
+	
 	protected boolean insurance;//страховка
 	
 	public boolean GetInsurance()				{ return insurance;}
@@ -18,6 +18,6 @@ public class Automobil extends TransportTrailer
 public String toString() 
 	{
 		//вызываем реализацию родительского класса
-	return "Класс автомобиль имеет следующие свойства\t "+super.toString() + "\t" ;
+	return "Класс автомобиль имеет следующие свойства\n "+super.toString() + "\t" + insurance + "\n";
 	}
 }

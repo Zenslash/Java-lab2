@@ -2,30 +2,36 @@ package run;
 
 public abstract class TransportTrailer extends Transport
 {
-	private Trailer trailer;
+	protected Trailer trailer;
 
-	protected TransportTrailer(String mark, String model, double maxmas, int kol, double maxspeed,Trailer trailer)
+	public TransportTrailer(String mark, String model, double maxmas, int kol, double maxspeed,Trailer trailer)
 	{
 		super(mark, model, maxmas, kol, maxspeed);
 		this.trailer = trailer;
 		
 	}
-//+ поле трейлер(как?)
 	
 	
-	public double GetMaxspeed() 	//эти методы должны вызываться за пределами
+	public double GetMaxspeed() 	
 	{
-	if (trailer != null)
-		maxspeed = maxspeed -20;
-	                                     //set
-	return maxspeed;
+		double result = maxspeed;
+		if (trailer != null)
+			result -= 20;
+
+		return result;
 	}
 	
 	public double GetControlMas() 		
 	{ 
-	if (trailer != null) 
-		maxmas = maxmas + trailer.mastrailer;
-	return maxmas;
+		double  result = maxmas;
+		if (trailer != null) 
+			result += trailer.mastrailer;
+		return result;
+	}
+	//----------------------------------------------------------------
+	public String toString() 
+	{
+		return "example   "+ super.toString() + "\t" + this.GetMaxspeed() + "\t" ;
 	}
 }
 

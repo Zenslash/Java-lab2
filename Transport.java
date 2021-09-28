@@ -26,7 +26,7 @@ public abstract class Transport
 	public void SetKol(int kol)						{this.kol = kol;}
 	public void SetMaxspeed(double maxspeed) 		{this.maxspeed = maxspeed;}
 
-protected Transport(String mark, String model, double maxmas, int kol, double maxspeed ) 
+public Transport(String mark, String model, double maxmas, int kol, double maxspeed ) 
 {
 	this.mark = mark;
 	this.model = model;
@@ -38,11 +38,11 @@ protected Transport(String mark, String model, double maxmas, int kol, double ma
 //переопределим метод toString
 public String toString() 
 	{
-		return mark + "\t" + model + "\t" + maxmas + "\t" + kol + "\t" + maxspeed;
+		return mark + "\t" + model + "\t" + maxmas + "\t" + kol + "\t" + maxspeed + "\t";
 	}
 public void Info()
 	{
-	    System.out.println( toString() + "\t"  );
+	    System.out.println( toString() + "-------------------------------------------------------------"  );
 
 	}
 
